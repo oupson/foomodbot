@@ -129,7 +129,7 @@ func (bot *Bot) Run() error {
 }
 
 func (bot *Bot) handle(s *discordgo.Session, i *discordgo.InteractionCreate) error {
-	userId := bot.config.ApplicationId
+	userId := bot.config.TargetUserId
 	member, err := s.GuildMember(i.GuildID, userId)
 	if err != nil {
 		return err
