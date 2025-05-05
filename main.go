@@ -143,7 +143,7 @@ func (bot *Bot) handle(s *discordgo.Session, i *discordgo.InteractionCreate) err
 		}
 
 		now := time.Now()
-		end := now.Add(15 * time.Second)
+		end := now.Add(5 * time.Second)
 
 		s.GuildMemberMute(i.GuildID, userId, true)
 
